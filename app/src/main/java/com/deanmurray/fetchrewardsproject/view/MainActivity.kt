@@ -1,7 +1,8 @@
-package com.deanmurray.fetchrewardsproject
+package com.deanmurray.fetchrewardsproject.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.deanmurray.fetchrewardsproject.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
