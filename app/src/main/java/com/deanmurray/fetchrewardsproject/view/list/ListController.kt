@@ -33,7 +33,8 @@ class ListController : TypedEpoxyController<HashMap<Int, ArrayList<FetchReward>>
         }
         CarouselHeaderViewModel_()
             .id("header:${listId}")
-            .title(listId)
+            .title("List: ${listId}")
+            .addTo(this)
         CarouselNoSnapModel_()
             .id("header:${listId}")
             .models(models)
