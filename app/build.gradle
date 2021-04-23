@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -31,6 +31,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    kapt {
+        correctErrorTypes = true
     }
 }
 
@@ -69,6 +72,10 @@ dependencies {
     // include koin-android-scope & koin-android
     implementation "org.koin:koin-android:$koin_version"
     implementation "org.koin:koin-android-viewmodel:$koin_version"
+
+    // Airbnb Epoxy
+    implementation 'com.airbnb.android:epoxy:3.9.0'
+    kapt 'com.airbnb.android:epoxy-processor:3.9.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

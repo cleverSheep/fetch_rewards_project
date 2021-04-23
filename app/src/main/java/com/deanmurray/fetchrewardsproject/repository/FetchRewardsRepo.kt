@@ -5,11 +5,12 @@ import com.deanmurray.fetchrewardsproject.network.FetchRewardsService
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import java.util.stream.Collectors.toList
 import javax.inject.Inject
 
 // Provides an abstraction over the location of the data
 class FetchRewardsRepo @Inject constructor(private val fetchRewardsService: FetchRewardsService) {
-    fun getFetchRewardsResource(): Single<List<FetchReward>> {
+    fun getFetchRewardsResource(): Single<ArrayList<FetchReward>> {
         return fetchRewardsService.getFetchRewardsResource()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())

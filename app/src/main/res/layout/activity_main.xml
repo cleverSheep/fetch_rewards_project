@@ -12,6 +12,6 @@
         android:id="@+id/fragment_container_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.deanmurray.fetchrewardsproject.view.MainFragment" />
+        android:name="com.deanmurray.fetchrewardsproject.view.list.FetchRewardList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
