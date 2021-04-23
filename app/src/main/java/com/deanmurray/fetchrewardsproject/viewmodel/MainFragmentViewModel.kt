@@ -12,7 +12,7 @@ class MainFragmentViewModel constructor(private val fetchRewardsRepo: FetchRewar
     private val disposable = CompositeDisposable()
 
     fun getFetchRewards() {
-        Log.d("MainFragmentViewModel", "start the fetch...")
+        Log.d("MainFragmentViewModel", "Initiate network call...")
         disposable.add(
             fetchRewardsRepo.getFetchRewardsResource().subscribeOn(Schedulers.io())
                 .subscribeWith(object : DisposableSingleObserver<List<FetchReward>>() {
